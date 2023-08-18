@@ -56,7 +56,7 @@ After some research, I found the following data sources:
   * Will drop irrelevant columns
 
 ### Capital Cities
-[WorldCapitalCities](https://geographyfieldwork.com/WorldCapitalCities.htm) - List of capital cities around the world
+[WorldCapitalCities](https://population.un.org/wup/Download/Files/WUP2018-F13-Capital_Cities.xls) - List of capital cities around the world
 
 #### Sample of data:
 ![img_5.png](attachments/img_5.png)
