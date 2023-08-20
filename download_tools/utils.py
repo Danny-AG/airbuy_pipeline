@@ -1,5 +1,7 @@
 import csv
+
 import pandas as pd
+
 from config import CAPITAL_CITY_DATA_PATH, GLOBAL_SQM_PRICE_DATA_PATH
 
 
@@ -13,10 +15,9 @@ def get_country_capital_dict():
     with open(CAPITAL_CITY_DATA_PATH, 'r') as csv_file:
         # Create a CSV reader
         csv_reader = csv.DictReader(csv_file)
-        country_capital_dict = {row['Country']:row['Capital City'] for row in csv_reader}
+        country_capital_dict = {row['Country']: row['Capital City'] for row in csv_reader}
 
     return country_capital_dict
-
 
 
 def get_global_sqm_prices_df():

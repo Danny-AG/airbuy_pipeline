@@ -1,12 +1,13 @@
-import requests
-from bs4 import BeautifulSoup
 import os
 
-from utils import is_word_in_string_list, get_cleaned_global_sqm_prices_df
-from config import AIRBNB_DATA_URL, AIRBNB_DATA_DIR
+import requests
+from bs4 import BeautifulSoup
+from utils import get_cleaned_global_sqm_prices_df, is_word_in_string_list
 
+from config import AIRBNB_DATA_DIR, AIRBNB_DATA_URL
 
 # Tool to quickly download relevant Airbnb data
+
 
 def download_airbnb_data(cities: list):
     """Download Airbnb data for the given cities."""
