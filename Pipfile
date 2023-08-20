@@ -7,6 +7,9 @@ name = "pypi"
 jupyterlab = "*"
 beautifulsoup4 = "*"
 pandas = "*"
+flake8 = "*"
+isort = "*"
+pre-commit = "*"
 
 [dev-packages]
 
