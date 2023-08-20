@@ -2,9 +2,10 @@ import os
 
 import requests
 from bs4 import BeautifulSoup
-from utils import get_cleaned_global_sqm_prices_df, is_word_in_string_list
 
-from config import AIRBNB_DATA_DIR, AIRBNB_DATA_URL
+from app.common.utils import is_word_in_string_list
+from app.config import AIRBNB_DATA_DIR, AIRBNB_DATA_URL
+from app.pipelines.global_property_sqm.utils import get_cleaned_global_sqm_prices_df
 
 # Tool to quickly download relevant Airbnb data
 
