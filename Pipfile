@@ -10,6 +10,7 @@ pandas = "*"
 flake8 = "*"
 isort = "*"
 pre-commit = "*"
+pytest = "*"
 
 [dev-packages]
 

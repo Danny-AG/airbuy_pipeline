@@ -4,8 +4,9 @@ import requests
 from bs4 import BeautifulSoup
 
 from app.common.utils import is_word_in_string_list
-from app.config import AIRBNB_DATA_DIR, AIRBNB_DATA_URL
-from app.pipelines.global_property_sqm.utils import get_cleaned_global_sqm_prices_df
+from app.config import AIRBNB_DATA_DIR, AIRBNB_DATA_URL, GLOBAL_PROPERTY_SQM_DATA_PATH
+from app.pipelines.global_property_sqm.etl.extract import get_df
+from app.pipelines.global_property_sqm.etl.transform import clean_global_sqm_prices
 
 # Tool to quickly download relevant Airbnb data
 
@@ -52,5 +53,6 @@ def download_airbnb_data(cities: list):
 
 
 if __name__ == '__main__':
-    cities = get_cleaned_global_sqm_prices_df()["Capital City"].tolist()
+    df = get_df(GLOBAL_PROPERTY_SQM_DATA_PATH)
+    cities = clean_global_sqm_prices(df)["Capital City"].tolist()
     download_airbnb_data(cities)
